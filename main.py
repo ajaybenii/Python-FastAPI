@@ -19,7 +19,7 @@ def get_profile():
 @app.post('/profile')
 def create_data_of_employee(employee: Data):
     db.append(employee.dict())
-    return db[-1]
+    return db
 
 @app.delete('/profile{employee_id}')
 def delete_profile(employee_id: int):
